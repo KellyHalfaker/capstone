@@ -15,6 +15,11 @@ class Api::EventsController < ApplicationController
       user_id: current_user.id
       )
     @event.save
+    user_event = UserEvent.new(
+      user_id: current_user.id,
+      event_id: @event.id
+      )
+    user_event.save
     tags_input = params[:tag_names].split(", ")
     tags_input.each do |tag_name|
       tag = Tag.find_by(name: tag_name)
@@ -64,4 +69,14 @@ class Api::EventsController < ApplicationController
     render "show.json.jbuilder"
   end
 
+  def destroy
+    event = Event.find_by_id(params[:id])
+    event.event_tags.each do |event_tag|
+      event_tag.destroy
+    end
+    event.user_events.each do |user_event|
+      user_event.destroy
+    end
+    event.destroy
+  end
 end
