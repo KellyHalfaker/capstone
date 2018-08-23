@@ -1,3 +1,4 @@
+json.id event.id
 json.title event.title
 json.creator event.creator.username
 json.images event.image_urls
