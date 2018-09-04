@@ -9,6 +9,11 @@ Rails.application.routes.draw do
     get "/events/:id" => "events#show"
     patch "/events/:id" => "events#update"
     delete "/events/:id" => "events#destroy"
+
+    post "/user-events" => "user_events#create"
+    delete "/user-events/:event_id" => "user_events#destroy"
+
+    post "/watson" => "watson#index"
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

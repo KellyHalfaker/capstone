@@ -10,8 +10,8 @@ class Api::UserEventsController < ApplicationController
   end
 
   def destroy
-    @user_event = UserEvent.find_by(user_id: current_user.id, event_id: params[:event_id])
-    @user_event.destroy
+    user_event = UserEvent.find_by(user_id: current_user.id, event_id: params[:event_id])
+    user_event.destroy
   end
 
 
