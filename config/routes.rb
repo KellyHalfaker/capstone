@@ -15,6 +15,9 @@ Rails.application.routes.draw do
     delete "/user-events/:event_id" => "user_events#destroy"
 
     post "/watson" => "watson#index"
+
+    post "/comments" => "comments#create"
+    get "/username/:id" => "comments#get_username"
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

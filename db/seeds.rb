@@ -19,7 +19,7 @@ event5 = Event.create!({title: "Magic the Gathering Gathering", description: "He
 image1 = Image.create!({url: "https://i.imgur.com/J080qHu.jpg", event_id: 1})
 image2 = Image.create!({url: "https://media-cdn.tripadvisor.com/media/photo-s/0e/a8/11/38/the-bean-chicago.jpg", event_id: 1})
 image3 = Image.create!({url: "https://images-na.ssl-images-amazon.com/images/I/81D%2BiPGF%2B1L._SX569_.jpg", event_id: 2})
-image4 = Image.create!({url: "https://vignette.wikia.nocookie.net/pokemon/images/1/14/IL082.jpg/revision/latest?cb=20140104230756", event_id: 3})
+image4 = Image.create!({url: "https://www.morningledger.com/wp-content/uploads/2016/07/pokemon-go-main.jpg", event_id: 3})
 image5 = Image.create!({url: "https://nthp-savingplaces.s3.amazonaws.com/2015/12/24/11/07/56/722/Historic%20Bars_Red%20Restaurant%20Interior_Blaise%20Nutter_edit.jpg", event_id: 4})
 image5 = Image.create!({url: "https://orig00.deviantart.net/f843/f/2016/177/e/4/maximillion_pegasus__deck__4kids_anime_style__by_dzemil5-da7p92q.png", event_id: 4})
 image5 = Image.create!({url: "https://i.ytimg.com/vi/yoqsLUAprpk/hqdefault.jpg", event_id: 5})
@@ -38,9 +38,13 @@ user_event1 = UserEvent.create!(user_id: 1, event_id: 1)
 user_event2 = UserEvent.create!(user_id: 1, event_id: 3)
 user_event3 = UserEvent.create!(user_id: 1, event_id: 5)
 user_event4 = UserEvent.create!(user_id: 2, event_id: 3)
-user_event5 = UserEvent.create!(user_id: 2, event_id: 2)
+user_event5 = UserEvent.create!(user_id: 3, event_id: 2)
 user_event4 = UserEvent.create!(user_id: 3, event_id: 4)
 user_event5 = UserEvent.create!(user_id: 3, event_id: 5)
+user_event6 = UserEvent.create!(user_id: 3, event_id: 1)
+user_event7 = UserEvent.create!(user_id: 2, event_id: 2)
+user_event8 = UserEvent.create!(user_id: 1, event_id: 4)
+user_event9 = UserEvent.create!(user_id: 2, event_id: 5)
 
 
 event_tag1 = EventTag.create!(event_id: 1, tag_id: 3)
@@ -55,6 +59,8 @@ event_tag9 = EventTag.create!(event_id: 4, tag_id: 4)
 event_tag10 = EventTag.create!(event_id: 5, tag_id: 7)
 
 comment1 = Comment.create(event_id: 1, user_id: 1, content: "I'll bring my guide books and some extra dice.")
+comment2 = Comment.create(event_id: 1, user_id: 2, content: "Sounds awesome! I'll tell my friends to get the word out.")
+# comment3 = Comment.create(event_id: 2, user_id:)
 
 
 # comment1 = Comment.create!({content: "I'll bring dice and shot glasses!", event_id: 1, user_id: 1})

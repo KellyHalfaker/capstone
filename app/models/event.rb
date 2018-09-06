@@ -16,7 +16,7 @@ class Event < ApplicationRecord
   end
 
   def easy_comments
-    return comments.map{|comment| [comment.user.username, comment.content, comment.created_at]}
+    return comments.map{|comment| {username: comment.user.username, content: comment.content, created_at:comment.created_at} }
   end
 
   def attendees
