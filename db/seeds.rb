@@ -54,6 +54,8 @@ event_tag8 = EventTag.create!(event_id: 5, tag_id: 2)
 event_tag9 = EventTag.create!(event_id: 4, tag_id: 4)
 event_tag10 = EventTag.create!(event_id: 5, tag_id: 7)
 
+comment1 = Comment.create(event_id: 1, user_id: 1, content: "I'll bring my guide books and some extra dice.")
+
 
 # comment1 = Comment.create!({content: "I'll bring dice and shot glasses!", event_id: 1, user_id: 1})
 # comment2 = Comment.create!({content: "Is there parking nearby?", event_id: 2, user_id: 3})

@@ -14,5 +14,21 @@ class Api::UserEventsController < ApplicationController
     user_event.destroy
   end
 
+  def current_user_events
+    @events = current_user.events
+    render "current_user_events.json.jbuilder"
+    # @user_events = UserEvent.where(user_id: current_user.id)
+    # @event_ids = @user_events.map { |user_event| user_event.event_id }
+    # @events = []
+    # @event_ids.each do |event_id|
+    #   @events.push( {
+    #     title: Event.find_by(id: event_id).title,
+    #     address: Event.find_by(id: event_id).address,
+    #     date: Event.find_by(id: event_id).date
+    #   })
+
+    # end
+    # render "current_user_events.json.jbuilder"
+  end
 
 end
